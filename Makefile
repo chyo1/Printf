@@ -2,7 +2,7 @@ RM=			rm -f
 NAME=		libftprintf.a
 CC=			cc
 CFLAGS=		-Wall -Wextra -Werror
-SRCS_MAN=	ft_printf.c print.c
+SRCS_MAN=	ft_printf.c print_num.c print_char_or_addr.c
 OBJS_MAN =  $(SRCS_MAN:.c=.o)
 .PHONY : all bonus clean fclean re
 

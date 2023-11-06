@@ -16,24 +16,20 @@
 # include <unistd.h>
 # include <stdarg.h>
 # include <stdlib.h>
- # include <stdio.h> //
+# include <stdio.h> //
 
 int		ft_printf(const char *str, ...);
+int		find_per_or_end(const char *str, size_t *idx, int *cnt);
 int		div_type(va_list ap, char c, int *cnt);
-void	print_atol(long long nbr, char *base, unsigned int div, int *cnt);
-int		print_num(va_list ap, int *cnt);
-int		print_hex(va_list ap, char lowup, int *cnt);
-int		print_addr(va_list ap, int *cnt);
-int		print_char(va_list ap, char type, int *cnt);
+
 size_t	ft_strlen(const char *s);
-// typedef struct s_list{
-// 		zero;
-// 		hash;
-// 		space;
-// 		plus;
-// 	//
-// 		dash;
-// 	 dot;
-// }	flag;
+int		print_char(va_list ap, char type, int *cnt);
+int		print_addr(va_list ap, int *cnt);
+
+int		print_int_n_uint(va_list ap, char c, int *cnt);
+int		print_ltoa(long long nbr, char *base, size_t div, int *cnt);
+int		print_ultoa(unsigned long long num, char *base, size_t div, int *cnt);
+int		print_utoa(unsigned int num, char *base, size_t div, int *cnt);
+int		print_hex(va_list ap, char lowup, int *cnt);
 
 #endif
