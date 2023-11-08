@@ -4,7 +4,7 @@ CC=			cc
 CFLAGS=		-Wall -Wextra -Werror
 SRCS_MAN=	ft_printf.c print_num.c print_char_or_addr.c
 OBJS_MAN =  $(SRCS_MAN:.c=.o)
-.PHONY : all bonus clean fclean re
+.PHONY : all clean fclean re
 
 all : $(NAME)
 
